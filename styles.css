@@ -1,101 +1,111 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: roboto serif;
-    font-weight: 20px;
-    background-image: url(Assets/18084419-uefa-champions-league-hd-wallpaper.jpg);
-    background-size: cover;
-    color: white;
+body {
+  font-family: "Roboto Serif";
+  font-weight: 20px;
+  background-image: url(Assets/18084419-uefa-champions-league-hd-wallpaper.jpg);
+  background-size: cover;
+  color: white;
 }
 header {
-    text-align: center;
+  text-align: center;
 }
 header img {
-    max-width: 100%;
-    height: 10rem;
-    background: inherit;
-    background-size: cover;
-    background-position: center;
-    opacity: 1.9;
+  max-width: 100%;
+  height: 10rem;
+  background: inherit;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
 }
 
 .container {
-    display: flex;
-    justify-content: space-evenly;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .pots {
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-right: 50px;
-    width: 20rem;
-    
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 20rem;
 }
 
 .pot {
-    flex: 1;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    margin: 35px;
+  flex: 1;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin: 35px;
 }
 
 .pot h2 {
-    position: relative;
-    text-align: center;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-    font-size: 1.5rem;
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  font-size: 1.5rem;
 }
 
 .pot h2::after {
-    content: "";
-    display: block;
-    height: 4px;
-    width: 100%;
-    margin: 0 auto;
-    background: linear-gradient(to right, rgb(187, 225, 255), rgb(0, 123, 255));
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 1;
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(to right, rgb(187, 225, 255), rgb(0, 123, 255));
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
 }
 .pot ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 .pot li {
-    margin-bottom: 5px;
-    padding: 1px;
-    font-size: 1.2rem;
+  margin-bottom: 5px;
+  padding: 1px;
+  font-size: 1.2rem;
 }
 .matchday {
-    flex: 1;
-    width: 15rem;
-    background-color: inherit;
+  flex: 1;
+  width: 15rem;
+  background-color: inherit;
 
-    text-align: center;
+  text-align: center;
 }
 
 .matchday h2 {
-    margin-bottom: 10px;
-    margin-top: 5px;
-    font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-size: 1.5rem;
 }
 
 .matchday ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .matchday li {
-    margin-bottom: 5px;
-    padding: 1px;
-    font-size: 1.2rem;
+  margin-bottom: 5px;
+  padding: 1px;
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pots {
+    grid-template-columns: 1fr;
+  }
 }
