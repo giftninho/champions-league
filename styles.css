@@ -105,7 +105,17 @@ header img {
     flex-direction: column;
     align-items: center;
   }
-  .pots {
-    grid-template-columns: 1fr;
+
+  .pot {
+    order: 1; /* Pots come first */
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .matchday {
+    order: 2; /* Matchdays after pots */
+    width: 90%;
+    margin: 10px 0;
   }
 }
+
